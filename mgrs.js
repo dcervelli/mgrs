@@ -30,11 +30,15 @@ var I = 73; // I
 var O = 79; // O
 var V = 86; // V
 var Z = 90; // Z
+
 export default {
   forward: forward,
   inverse: inverse,
-  toPoint: toPoint
+  toPoint: toPoint,
+  UTMtoLL: UTMtoLL,
+  LLtoUTM: LLtoUTM
 };
+
 /**
  * Conversion of lat/lon to MGRS.
  *
@@ -108,7 +112,7 @@ function radToDeg(rad) {
  *     northing, zoneNumber and zoneLetter properties, and an optional
  *     accuracy property in digits. Returns null if the conversion failed.
  */
-function LLtoUTM(ll) {
+export function LLtoUTM(ll) {
   var Lat = ll.lat;
   var Long = ll.lon;
   var a = 6378137.0; //ellip.radius;
@@ -195,7 +199,7 @@ function LLtoUTM(ll) {
  *     for the bounding box calculated according to the provided accuracy.
  *     Returns null if the conversion failed.
  */
-function UTMtoLL(utm) {
+export function UTMtoLL(utm) {
 
   var UTMNorthing = utm.northing;
   var UTMEasting = utm.easting;

@@ -33,11 +33,15 @@ var I = 73; // I
 var O = 79; // O
 var V = 86; // V
 var Z = 90; // Z
+
 var mgrs = {
   forward: forward,
   inverse: inverse,
-  toPoint: toPoint
+  toPoint: toPoint,
+  UTMtoLL: UTMtoLL,
+  LLtoUTM: LLtoUTM
 };
+
 /**
  * Conversion of lat/lon to MGRS.
  *
@@ -752,6 +756,8 @@ exports['default'] = mgrs;
 exports.forward = forward;
 exports.inverse = inverse;
 exports.toPoint = toPoint;
+exports.LLtoUTM = LLtoUTM;
+exports.UTMtoLL = UTMtoLL;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
