@@ -36,7 +36,8 @@ export default {
   inverse: inverse,
   toPoint: toPoint,
   UTMtoLL: UTMtoLL,
-  LLtoUTM: LLtoUTM
+  LLtoUTM: LLtoUTM,
+  getLetterDesignator: getLetterDesignator
 };
 
 /**
@@ -289,7 +290,7 @@ export function UTMtoLL(utm) {
  *     for.
  * @return {char} The letter designator.
  */
-function getLetterDesignator(lat) {
+export function getLetterDesignator(lat) {
   //This is here as an error flag to show that the Latitude is
   //outside MGRS limits
   var LetterDesignator = 'Z';

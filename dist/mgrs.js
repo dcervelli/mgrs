@@ -39,7 +39,8 @@ var mgrs = {
   inverse: inverse,
   toPoint: toPoint,
   UTMtoLL: UTMtoLL,
-  LLtoUTM: LLtoUTM
+  LLtoUTM: LLtoUTM,
+  getLetterDesignator: getLetterDesignator
 };
 
 /**
@@ -758,6 +759,7 @@ exports.inverse = inverse;
 exports.toPoint = toPoint;
 exports.LLtoUTM = LLtoUTM;
 exports.UTMtoLL = UTMtoLL;
+exports.getLetterDesignator = getLetterDesignator;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
